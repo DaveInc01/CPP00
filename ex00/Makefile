@@ -13,15 +13,14 @@ RM = rm -rf
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-	c++ $(FLAGS) $(STD) $< -o $@
-
-%.o: %.c
-	$(FLAGS) $(STD) -c $< -o $@
-
-clean:
-	$(RM) $(OBJ) $(NAME)
+	c++ $(FLAGS) $(STD) $(OBJ) -o $@
 
 fclean:
+	$(RM) $(OBJ) $(NAME)
+
+clean:
 	$(RM) $(NAME)
 
 re:	fclean all
+
+.PHONY: all clean fclean re

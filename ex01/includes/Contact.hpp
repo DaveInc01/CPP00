@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <cstring>
-#include <boost/algorithm/string.hpp>
 #include <sstream>
 
 class Contact{

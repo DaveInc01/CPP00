@@ -23,8 +23,6 @@ std::string check_size(std::string string)
 {
     std::string space = "";
     std::string result;
-    boost::trim_left(string);
-    boost::trim_right(string);
     if(string.length() < 10)
     {
         for (int i = string.length(); i < 10; i++)
@@ -45,7 +43,8 @@ int ft_stoi(std::string number)
 {
     int i = 0;
     int flag = 0;
-    for (char c : number) {
+    int j;
+    for (char c = number[j]; j < number.length(); j++) {
         if (c >= '0' && c <= '9') {
             i = i * 10 + (c - '0');
         }
