@@ -12,6 +12,11 @@
 #ifndef __ACCOUNT_H__
 #define __ACCOUNT_H__
 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <functional>
+#include <iomanip>
 // ************************************************************************** //
 //                               Account Class                                //
 // ************************************************************************** //
@@ -51,6 +56,9 @@ private:
 	int				_amount;
 	int				_nbDeposits;
 	int				_nbWithdrawals;
+
+	// static std::vector<Account *> objects;
+	// static int	_DisplayCount;
 
 	Account( void );
 
